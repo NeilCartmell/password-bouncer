@@ -1,0 +1,9 @@
+.speech-bubble {
+	font-family: sans-serif;
+	border: solid 2px #AAA;
+	max-width: 300px;
+	margin: auto;
+	min-height: 150px;
+	border-radius: 20%;
+	padding: 5%;
+}

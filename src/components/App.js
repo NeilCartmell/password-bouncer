@@ -1,16 +1,20 @@
 import './App.css';
 import React, {useState} from 'react';
 import Bouncer from './Bouncer.js';
+import SpeechBubble from './SpeechBubble.js';
 /*(?<!\d)\d{2}(?!\d)*/ /* look aheads*/
 /*/(?:\D|\b)([1-9][0-9])(?:\D|\b)/*/
 
 const App = () => {
+	console.log("in app");
 	const [showPassword, setShowPassword] = useState(false);
 	const [password, setPassword] = useState('');
 	const [savedPasswords, setSavedPasswords] = useState([]);
-	const [bouncerMessage, setBouncerMessage] = useState('Choose your password!');
+	const [bouncerMessage, setBouncerMessage] = useState('I\'m going to need you to choose a password before you can come in mate!');
+	const [messageIndex, setMessageIndex] = useState(0);
 	const [round, setRound] = useState(1); 
 	const [bouncerHasBlownIt, setBouncerHasBlownIt] = useState(false);
+
 
 	const conditions2 = [
 		{f: ()=>alphaOrder(2),
@@ -38,7 +42,7 @@ const App = () => {
 		{f: ()=> regex(/\s/), 
 			message: 'No spaces mate!'},
 		{f: ()=> tooMany(5),
-			message: 'Variety is the spice of life mate. You\'ve used the same character too many times'},
+			message: 'Variety is the spice of life mate! You\'ve used the same character too many times!'},
 		{f: ()=> regex(/123/), 
 			message: 'Wow! You are stupid 123...How will anyone be able to crack that! No!'},
 		{f: ()=> regex(/1234/), 
@@ -183,7 +187,8 @@ const App = () => {
 	};
 
 	const onSubmit = (event) => {
-		
+		setInterval(()=>{incrementMessageIndex()}, 1000);
+		//setMessageIndex(messageIndex + 1);
 		if (round === 1) {
 			onRound1Submit();
 
@@ -192,6 +197,12 @@ const App = () => {
 			
 		} 
 	};
+
+	const incrementMessageIndex = () => {
+		console.log("in increment message index");
+		setMessageIndex(messageIndex + 1);
+		
+	}
 
 	const onRound1Submit = () => {
 		const testResults = testAll();
@@ -250,6 +261,7 @@ const App = () => {
 	*/
 	return (
 		<div className="app">
+				<SpeechBubble message={bouncerMessage} messageIndex={messageIndex}/>
 				<Bouncer/>
 				<label>Choose password:</label>
 				<br/>
@@ -264,9 +276,7 @@ const App = () => {
 				<div>
 					<button onClick={onSubmit}>Submit</button>
 				</div>
-				<div>
-					{bouncerMessage}
-				</div>
+				
 		</div>
 
 	);
