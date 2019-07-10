@@ -1,0 +1,593 @@
+.ending-scene {
+
+	position: absolute;
+	height: 460px;
+	width: 560px;
+	left: 50%;
+	margin-left: -280px;
+	
+    top: 0;
+	box-sizing: border-box;
+	background-color: #222;
+	z-index: 0;
+}
+
+.ending-scene.in-front {
+	z-index: 100;
+}
+
+.dance-instructions {
+	color: white;
+	text-align: center;
+	margin-top: 5%;
+	font-size: 1.2rem;
+}
+
+.music-player-instructions {
+	color: white;
+	text-align: center;
+	font-size: 1.2rem;
+	margin-top: 64%;
+}
+
+.stage {
+	width: 90%;
+	height: 20%;
+	left: 5%;
+	position: absolute;
+	bottom: 10%;
+	background-color: gray;
+	display: none;
+}
+
+.stage .banner {
+	position: absolute;
+	width: 96%;
+	height: 80%;
+	top: 10%;
+	left: 2%;
+	background-color: white;
+}
+
+
+.dancer {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	margin-left: -150px;
+	height: 300px;
+	width: 300px;
+	
+}
+
+.dancer .head {
+	position: absolute;
+	width: 22%;
+	height: 22%;
+	left: 39%;
+	border-radius: 45% 45% 55% 55%;
+}
+
+.dancer .face {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border-radius: 45% 45% 55% 55%;
+	background-color: #ffe0bd;
+	z-index: 4;
+}
+
+.dancer .glasses {
+	position: absolute;
+	height: 32%;
+	width: 38%;
+	background-color: black;
+	top: 34%;
+	border-radius: 10%;
+}
+
+.dancer .glasses.left{
+	left: 10%;
+}
+
+.dancer .glasses.right {
+	right: 10%;
+}
+
+.dancer .glasses-inner {
+	position: absolute;
+	height: 70%;
+	width: 68%;
+	background-color: #ffe0bd;
+	left: 16%;
+	top: 15%;
+	border-radius: 10%;
+}
+
+.dancer .glasses-bar {
+	position: absolute;
+	background-color: black;
+	height: 20%;
+	width: 40%;
+	right: -40%;
+	top: 30%;
+}
+
+.dancer .glasses .ear-bar {
+	position: absolute;
+	background-color: black;
+	height: 20%;
+	width: 28%;
+	top: 30%;
+}
+
+.dancer .glasses.left .ear-bar {
+	left: -27%;
+}
+
+.dancer .glasses.right .ear-bar {
+	right: -27%;
+}
+
+.dancer .eye.outer {
+	position: absolute;
+	background-color: #aaa;
+	height: 80%;
+	width: 80%;
+    border-radius: 50%;
+    top: 10%;
+}
+
+.dancer .left .eye.outer {
+	left: 15%;
+}
+
+.dancer .right .eye.outer {
+	right: 15%;
+}
+
+.dancer .eye.inner {
+	position: absolute;
+	background-color: white;
+	height: 70%;
+	width: 70%;
+	border-radius: 50%;
+	left: 15%;
+	top: 15%;
+}
+
+.dancer .eye .iris {
+	position: absolute;
+	height: 70%;
+	width: 60%;
+	background-color: green;
+	border-radius: 50%;
+	left: 20%;
+	top: 30%;
+}
+
+.dancer .nose {
+  position: absolute;
+  border-bottom: solid 2px #AAA;
+  height: 10%;
+  width: 10%;
+  left: 45%;
+  top: 64%;
+  border-radius: 50%;
+}
+
+.dancer .nosteral {
+  position: absolute;
+  height: 75%;
+  width: 75%;
+  height: 75%;
+  border-bottom: solid 1px #AAA;
+  border-radius: 50%;
+  bottom: 5%;
+  bottom: 0;
+}
+
+.dancer .nosteral.left {
+  left: -50%;
+  transform: rotate(45deg);
+}
+
+.dancer .nosteral.right {
+  right: -50%;
+  transform: rotate(-45deg);
+}
+
+.dancer .mouth {
+	position: absolute;
+	background-color: #AAA;
+	height: 2%;
+	width: 15%;
+	top: 85%;
+	left: 42.5%;
+}
+
+.dancer .hair {
+	position: absolute;
+	background-color: rgb(162, 84, 36);
+	border-radius: 50%;
+	height: 60%;
+	width: 30%;
+	top: 10%;
+}
+
+.dancer .hair.left {
+	left: -8%;
+	transform: rotate(-5deg);
+}
+
+.dancer .hair.right {
+	right: -8%;
+	transform: rotate(5deg);
+}
+
+.dancer .neck {
+	position: absolute;
+	height: 5%;
+	width: 8%;
+	background-color: #edd0af;
+	left: 46%;
+	top: 20%;
+	z-index: 3;
+	border-radius: 0 0 40% 40%;
+}
+
+.dancer .torso {
+	position: absolute;
+	height: 30%;
+	width: 28%;
+	background-color: #005e00;
+	left: 36%;
+	top: 22%;
+	border-radius: 20% 20% 30% 30%;
+	z-index: 2;
+	transform: rotate(2deg);
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+.dancer .upper-arm {
+	background-color: #006900;
+	position: absolute;
+	height: 65%;
+	width: 30%;
+	top: 2%;
+	
+	border-radius: 35% 35% 35% 35%;
+	transform-origin: center 5%;
+}
+
+.dancer .upper-arm.left {
+	left: 0%;
+	transform: rotate(70deg);
+}
+
+.dancer .upper-arm.right {
+	right: 0%;
+	transform: rotate(-70deg);
+}
+
+.dancer .lower-arm {
+	position: absolute;
+	bottom: -70%;
+	height: 100%;
+	width: 100%;
+	background-color: #007200;
+	border-radius: 35%;
+	transform-origin: center 15%;
+}
+
+.dancer .lower-arm.right {
+	transform: rotate(-120deg);
+}
+
+.dancer .lower-arm.left {
+	transform: rotate(120deg);
+}
+
+.dancer .hand {
+	position: absolute;
+	height: 35%;
+	width: 80%;
+	background-color: #ffe0bd;
+	bottom: -25%;
+	left: 10%;
+	border-radius: 10% 10% 40% 40%;
+}
+
+.dancer .thumb {
+	position: absolute;
+	height: 50%;
+	width: 40%;
+	background-color: #ffe0bd;
+	border-radius: 50% 50% 50% 50%;
+	top: 10%;
+}
+
+.dancer .thumb.left {
+	left: -20%;
+	transform: rotate(30deg);
+}
+
+.dancer .thumb.right {
+	right: -20%;
+	transform: rotate(-30deg);
+}
+
+.dancer .legs {
+	position: absolute;
+	width: 28%; 
+	height: 54%;
+	top: 44%;
+	left: 36%;
+}
+
+.dancer .trousers-top {
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	background-color: #1560bd;
+	border-radius: 20%;
+}
+
+.dancer .thigh {
+	position: absolute;
+	height: 20%;
+	height: 30%;
+	width: 49%;
+	background-color: #1560bd;
+	border-radius: 0 0 20% 20%;
+	top: 20%;
+	transform-origin: center top;
+}
+
+.dancer .thigh.right {
+	right: 0;
+}
+
+.dancer .thigh.left {
+	transform: rotate(20deg);
+}
+
+.dancer .lower-leg {
+	position: absolute;
+	height: 130%;
+	width: 100%;
+	background-color: #1560bd;
+	top: 80%;
+	border-radius: 20% 20% 20% 20%;
+	transform-origin: center top;
+}
+
+.dancer .foot-mask {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: #1560bd;
+	border-radius: 20% 20% 20% 20%;
+	z-index: 50;
+}
+
+.dancer .lower-leg.left {
+	transform: rotate(-20deg);
+}
+
+.dancer .lower-leg.right {
+
+}
+
+.dancer .foot {
+	position: absolute;
+	bottom: -30%;
+	height: 40%;
+	width: 75%;
+	left: 12.5%;
+	background-color: rgb(128, 65, 34);
+	border-radius: 0 0 50% 50%;
+	z-index: 0;
+}
+
+
+
+/*DANCING ANIMATION*/
+
+
+.dancer.dancing .head {
+	animation-name: dance-head;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes dance-head {
+	
+	0% {
+		left: 40%;
+	}
+
+	49% {
+		left: 38.5%;
+	}
+
+	50% {
+		left: 40%;
+	}
+}
+
+.dancer.dancing .upper-arm.left {
+	animation: dance-upper-arm-left;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-delay: 2s;
+
+}
+
+@keyframes dance-upper-arm-left {
+	from {
+		transform: rotate(70deg);
+	}
+
+	50% {
+		transform: rotate(24deg);
+
+	}
+}
+
+.dancer.dancing .upper-arm.right {
+	animation: dance-upper-arm-right;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-delay: 4s;
+}
+
+@keyframes dance-upper-arm-right {
+	from {
+		transform: rotate(-70deg);
+	}
+
+	
+
+	50% {
+		transform: rotate(-24deg);
+
+	}
+}
+
+
+.dancer.dancing .lower-arm.left {
+	animation-name: dance-lower-arm-left;
+  	animation-duration: 4s;
+  	animation-iteration-count: infinite;
+  	animation-delay: 2s;
+}
+
+
+@keyframes dance-lower-arm-left {
+	from {
+		transform: rotate(120deg);
+	}
+
+	25% {
+		transform: rotate(120deg);
+	}
+
+	30% {
+		transform: rotate(180deg);
+	}
+
+	50% { 
+		transform: rotate(120deg);
+	}
+	
+}
+
+.dancer.dancing .lower-arm.right {
+	animation-name: dance-lower-arm-right;
+  	animation-duration: 4s;
+  	animation-iteration-count: infinite;
+  	animation-delay: 4s;
+}
+
+@keyframes dance-lower-arm-right {
+	
+	from {
+		transform: rotate(-120deg);
+	}
+
+	25% {/*was 55*/
+		transform: rotate(-120deg);
+	}
+
+	30% {/* was 75*/
+		transform: rotate(-180deg); /*was -120*/
+	}
+
+	50% {/* was 80*/
+		transform: rotate(-120deg); /* was -180*/
+	}
+}
+
+.dancer.dancing .thigh.left {
+	animation-name: dance-thigh-left;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+	animation-delay: 16s;
+}
+
+@keyframes dance-thigh-left {
+	
+	0% {
+		transform: rotate(20deg);
+	}
+
+	25% {
+		transform: rotate(70deg);
+	}
+
+	50% {
+		transform: rotate(20deg);
+	}
+
+	
+}
+
+.dancer.dancing .lower-leg.left {
+	animation-name: dance-lower-leg-left;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+	animation-delay: 16s;
+}
+
+@keyframes dance-lower-leg-left {
+	0% {
+		transform: rotate(-20deg);
+	}
+
+
+	18% {
+		transform: rotate(-70deg);
+	}
+
+
+	25% {
+		transform: rotate(0deg);
+	}
+  
+	38% {
+		transform: rotate(-30deg);
+	}
+
+	50% {
+		transform: rotate(-20deg);
+	}
+}
+
+
+/*RIGHT LEG*/
+
+.dancer.dancing .lower-leg.right {
+	animation-name: dance-lower-leg-right;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+	animation-delay: 16s;
+}
+
+@keyframes dance-lower-leg-right {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	75% {transform: rotate(0deg);
+	}
+
+	76% {
+		transform: rotate(-100deg);
+	}
+
+	80% {
+		transform: rotate(0deg);
+	}
+}

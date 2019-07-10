@@ -2,33 +2,32 @@
   position: relative;
   height: 250px;
   width: 300px;
+  width: 200px;
+  width: 165px;
   margin: auto;
   margin-top: 10px;
+  z-index: 2;
 }
 
 .bouncer .face {
   position: absolute;
   height: 200px;
   width: 165px;
-  width: 55%;
-  left: 22.5%;
-  
-  
   background-color: #ffe0bd;
   border-radius: 38% 38% 44% 44%;
   border: solid 2px #AAA;
-  z-index: 1;
+  z-index: 3;
  }
 
 .bouncer .neck {
   position: absolute;
   background-color: #ffe0bd;
   border: solid 2px #AAA;
-  width: 25%;
+  width: 46%;
   height: 10%;
-  z-index: 0;
+  z-index: 2;
   top: 78%;
-  left: 37.5%;
+  left: 27%;
   border-radius: 0% 0% 35% 35%;
 }
 
@@ -38,21 +37,31 @@
   background-color: white;
   border: solid 2px #AAA;
   height: 9%;
-  width: 18%;
+  width: 32%;
   top: 84%;
- 
+  z-index: 3;
   border-radius: 10%;
   
 }
 
-.bouncer .collar-left {
-  left: 28%;
+.bouncer .collar.left {
+  left: 12%;
   transform: rotate(25deg);
 }
 
-.bouncer .collar-right {
-  right: 28%; /*Don't know why but this seems off when it's at 28%*/
+.bouncer .collar.right {
+  right: 12%; 
   transform: rotate(-25deg);
+}
+
+.bouncer .torso {
+  position: absolute;
+  background-color: #eee;
+  height: 12%;
+  width: 100%;
+  bottom: 0;
+  z-index: 0;
+  border-radius:10% 10% 0 0;
 }
 
 .bouncer .shirt-button {
@@ -65,8 +74,7 @@
   border: solid 2px #AAA;
   background-color: #eee;
   bottom: 2%;
-  left: 48%;
-  
+  left: 46.5%;
 }
 
 .bouncer .hair-left-container {
@@ -105,18 +113,26 @@
   z-index: 4;
  }
 
-.bouncer .eyebrow-left {
+.bouncer .eyebrow.left {
   left: 25%;
   transform: rotate(-5deg);
-  //animation-name: left-eyebrow-talking;
+  
+}
+
+.bouncer .eyebrow.right {
+  transform: rotate(5deg);
+  right: 25%;
+  
+}
+
+.bouncer.talking .eyebrow.right {
+  animation-name: right-eyebrow-talking;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
 }
 
-.bouncer .eyebrow-right {
-  transform: rotate(5deg);
-  right: 25%;
-  //animation-name: right-eyebrow-talking;
+.bouncer.talking .eyebrow.left {
+  animation-name: left-eyebrow-talking;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
 }
@@ -164,11 +180,11 @@
   border: solid 2px #AAA;
  }
 
-.bouncer .eye-left {
+.bouncer .eye.left {
   left: 25%;
 }
 
-.bouncer .eye-right {
+.bouncer .eye.right {
   right: 25%;
 }
 
@@ -180,7 +196,10 @@
   border-radius: 38%;
   bottom: 10%;
   left: 25%;
-  
+}
+
+.bouncer.eyes-down .inner-eye {
+  bottom: 0;
 }
 
 .bouncer .ear {
@@ -226,11 +245,11 @@
   border-radius: 50%;
   top: 15%;
 }
-.bouncer .ear-line-left {
+.bouncer .ear-line.left {
   left: 20%;
 }
 
-.bouncer .ear-line-right {
+.bouncer .ear-line.right {
   right: 20%;
 }
 
@@ -243,11 +262,11 @@
   background-color: #ffe0bd;
 }
 
-.bouncer .ear-line-mask-left {
+.bouncer .ear-line-mask.left {
   left: 20%;
 }
 
-.bouncer .ear-line-mask-right {
+.bouncer .ear-line-mask.right {
   right: 20%;
 }
 
@@ -272,12 +291,12 @@
   bottom: 0;
 }
 
-.bouncer .left-nosteral {
+.bouncer .nosteral.left {
   left: -40%;
   transform: rotate(45deg);
 }
 
-.bouncer .right-nosteral {
+.bouncer .nosteral.right {
   right: -40%;
   transform: rotate(-45deg);
 }
@@ -291,9 +310,14 @@
   top: 81%;
   left: 40%;
   border-radius: 35%;
-  //animation-name: talking;
+  
+}
+
+.bouncer.talking .mouth {
+  animation-name: talking;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
+
 }
 
 

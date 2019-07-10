@@ -2,21 +2,25 @@ import './SpeechBubble.css';
 import React from 'react';
 
 class SpeechBubble extends React.Component {
-	constructor(props) {
-		super(props);
-		console.log("in speech bubble constructor");
+	
+	getVisibleText() {
+		return this.props.message.substring(0, this.props.messageIndex);
 	}
-	componentWillUpdate() {
-		console.log("in speech bubbble will update");
-			}
 
-	getText() {
-		
+	getInvisibleText() {
+		return this.props.message.substring(this.props.messageIndex, this.props.messageIndex.length)
 	}
+
+	
 
 	render() {
+
 		return (
-			<div className="speech-bubble">{this.props.message.substr(0, this.props.messageIndex)}</div>
+			<div className={'speech-bubble-container ' + (this.props.fadeOut ? ' fade' : '')}>
+				<div className="speech-bubble">
+					<span>{this.getVisibleText()}</span><span className="invisible-text">{this.getInvisibleText()}</span>
+				</div>
+			</div>
 			);
 	} 
 }

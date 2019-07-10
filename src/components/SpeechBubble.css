@@ -1,9 +1,64 @@
-.speech-bubble {
-	font-family: sans-serif;
-	border: solid 2px #AAA;
-	max-width: 300px;
+.speech-bubble-container {
+	/*border: solid thin black;*/
+	height: 150px;
+	height: 200px;
+	
+	max-width: 350px;
 	margin: auto;
-	min-height: 150px;
-	border-radius: 20%;
-	padding: 5%;
+	position: relative;
+}
+.speech-bubble {
+
+	position: absolute;
+	bottom: 0;
+	
+	font-size: 1.1rem;
+	font-size: 18px;
+	border: solid 2px #AAA;
+
+	max-width: 350px;
+	
+	box-sizing: border-box;
+	border-radius: 30px;
+	padding: 1.2em;
+	padding: 1em;
+	background-color: white;
+	z-index: 10;
+	
+
+}
+
+/*Below code which deals with creating triangle for speech bubble was taken
+ *from tutorial by Rajesh DN https://codingislove.com/css-speech-bubbles/
+ *
+*/
+.speech-bubble:before {
+   content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #00bfb6;
+  border-top: 10px solid #00bfb6;
+  border-bottom: 10px solid transparent;
+  left: 40px;
+  bottom: -20px;
+
+}
+
+.speech-bubble:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 8px solid transparent;
+  border-right: 8px solid white;
+  border-top: 8px solid white;
+  border-bottom: 8px solid transparent;
+  left: 42px;
+  bottom: -15px;
+}
+
+.invisible-text {
+	color: white;
 }
