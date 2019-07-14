@@ -20,6 +20,8 @@ const EndingScene = (props) => {
 			
 		</div>
 	);
-}
+};
+
+
 
 export default EndingScene;

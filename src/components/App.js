@@ -209,9 +209,7 @@ class App extends React.Component {
 		}
 
 		this.startSpeech();
-		 this.onWin(); //uncomment if you just want to skip to end scene
-		 return;
-
+		
 		if (this.state.round === 1) {
 			this.onRound1Submit();
 
