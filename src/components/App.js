@@ -239,6 +239,8 @@ class App extends React.Component {
 	};
 
 	startSpeech() {
+		/*having issue on mobile of not seeing the text when entering password. Testing to see if this will fix it*/
+    	window.scrollTo(0,0);
 		clearInterval(this.intervalId);
 		this.setState({messageIndex: 0, talking: true});
 		this.intervalId = setInterval(()=>{this.incrementMessageIndex()}, 20);
@@ -332,7 +334,7 @@ class App extends React.Component {
 
 				{this.state.haveWon && //congratulations, you now get to hear me rap
 					<div className="music-player">
-						<iframe title="music-player" width="100%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/632633979&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+						<iframe title="music-player" width="100%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/665089445&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 					</div>
 				}
 
